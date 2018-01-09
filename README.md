@@ -43,8 +43,8 @@ Download the zip file first to use this library and uncompress it to a folder na
  *         dataRate    Set the data transfer rate.
  *
  * @return result
- *    ture : falid
- *    false : succussful
+ *    ture : succussful
+ *    false : falid
  */
     bool init(eBNO055PowerModes_t powerMode, eBNO055DataRateMode_t dataRate);
 /*
