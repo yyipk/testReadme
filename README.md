@@ -89,9 +89,9 @@ Download the zip file first to use this library and uncompress it to a folder na
 
     typedef struct BNO055EulerData_s
     {
-      float x;
-      float y;
-      float z;
+        float x;
+        float y;
+        float z;
     } BNO055EulerData;
     
     typedef struct BNO055LinAccData_s
