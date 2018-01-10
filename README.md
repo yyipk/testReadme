@@ -29,24 +29,22 @@ Download the zip file first to use this library and uncompress it to a folder na
 
 ```C++
 
-#include "Arduino.h"
-#include "Wire.h"
-
-#define BNO055_ADDRESS                (0x28)        /* 0x28 com3 low 0x29 com3 high     */
-#define BNO055_POLL_TIMEOUT           (100)         /* Maximum number of read attempts  */
-#define BNO055_ID                     (0xA0)        /* pg58                             */
-
 /*
  * @brief init BNO055 device
+ *
+ * @return result
+ *    ture : falid
+ *    false : succussful
+ */
+    bool init();
+/*
+ * @brief set BNO055 mode
  *
  * @param  powerMode   Set power mode.
  *         dataRate    Set the data transfer rate.
  *
- * @return result
- *    ture : succussful
- *    false : falid
  */
-    bool init(eBNO055PowerModes_t powerMode, eBNO055DataRateMode_t dataRate);
+    void setMode(eBNO055PowerModes_t powerMode, eBNO055DataRateMode_t dataRate);
 /*
  * @brief  Read euler angles.
  *         The resulting data is stored in EulerAngles.
@@ -89,9 +87,9 @@ Download the zip file first to use this library and uncompress it to a folder na
 
     typedef struct BNO055EulerData_s
     {
-        float x;
-        float y;
-        float z;
+      float x;
+      float y;
+      float z;
     } BNO055EulerData;
     
     typedef struct BNO055LinAccData_s
